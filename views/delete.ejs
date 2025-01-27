@@ -1,0 +1,19 @@
+<%- include("_header") -%>
+
+  <h1>Удалить смену?</h1>
+
+  <form action="/delete/<%= model.id %>" method="post">
+    
+    <div class="form-horizontal">
+
+      <%- include("_display") -%>
+
+        <div class="form-group row">
+          <label class="col-form-label col-sm-2"></label>
+          <div class="col-sm-10">
+            <input type="submit" value="Effacer" class="btn btn-default btn-danger" />
+            <a class="btn btn-outline-dark cancel">Подтвердить</a>
+          </div>
+        </div>
+    </div>
+  </form>

@@ -1,0 +1,20 @@
+<%- include("_header") -%>
+
+<h1>Изменить данные о смене</h1>
+<form action="/edit/<%=model[0].id %>" method="post">
+
+  <div class="form-horizontal">
+    
+    <%- include("_editor_shifts") -%>
+
+    <div class="form-group row">
+      <label class="col-form-label col-sm-2"></label>
+      <div class="col-sm-10">
+        <input type="submit" class="btn btn-sm btn-danger" value="Подтвердить"></input>
+      </div>
+    </div>
+
+    <%- include("_display") -%>
+
+  </div>
+</form>

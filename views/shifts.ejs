@@ -1,0 +1,25 @@
+<%- include("_header") -%>
+
+  <h1 style="margin: 20px; text-align: center;">Список смен</h1>
+
+  <a class="btn btn-sm btn-success" href="/create">Добавить смену</a>
+  <div class="table-container">
+    <% for (const shift of model) { %>
+      <div class="card-container">
+        <p>
+          Дата: <%= shift.date %>
+        </p>
+        <p>
+          Сложность: <%= shift.difficulty %>
+          Процедуры: <%= shift.procedures %>
+        </p>
+        <form action="/edit/<%=shift.id%>" method="get">
+          <input type="submit" class="btn btn-sm btn-warning" value="Изменить"></input>
+        </form>
+        <form action="/delete/<%=shift.id%>" method="post">
+          <input type="submit" class="btn btn-sm btn-danger" value="Удалить"></input>
+          <input type="hidden" name="" value="<%=shift.id%>">
+        </form>
+      </div>
+      <% } %>
+  </div>

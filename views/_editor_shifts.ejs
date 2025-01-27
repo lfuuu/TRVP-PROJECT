@@ -1,0 +1,22 @@
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="date">Дата</label>
+  <div class="col-sm-8">
+    <input type="date" autofocus class="form-control" name="date" value="<%= model.date %>" />
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="date">Процедуры</label>
+  <div class="">
+    <% for (let procedure of row) { %>
+      <div>
+        <input type="text" name="fio" placeholder="ФИО">
+        <input type="checkbox" autofocus class="" name="procedures"
+          value="<%= [procedure.procedure_name, procedure.difficulty] %>" />
+        <label for="scales">
+          <%= procedure.procedure_name %>
+        </label>
+      </div>
+    <% } %>
+  </div>
+</div>

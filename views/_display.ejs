@@ -1,0 +1,18 @@
+<h1>Текущее состояние смены</h1>
+
+<div class="form-group row">  
+  <label class="col-form-label col-sm-2" for="date">Дата</label>
+  <div class="col-sm-8">
+    <p><%= model[0].date %></p>
+  </div>
+</div>
+
+<div class="form-group row"> 
+  <div class="form-group row">
+      <div>
+        <% for (let patient of patients) { %>
+          <p><b>Процедура - </b> <%= patient.procedure_name %> <b>Пациент - </b> <%= patient.patient_name %></p>
+        <% } %>
+      </div>
+    </div>
+</div>
